@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* hero */
+
+.hero-section{
+    text-align: center;
+    padding: 5rem 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* navbar */
+
+li{
+    list-style: none;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+ 
+header{
+    position: relative;
+}
+
+.navbar{
+    width: 100vw;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 33px 36px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 33px 36px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 33px 36px -3px rgba(0,0,0,0.75);
+    overflow: hidden;
+    background-color: #0000000f;
+}
+
+.navbar .links {
+    display: flex;
+}
+
+.navbar .toggle-btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.active{
+   background-color: #ffffff82;
+}
+
+.active:hover{
+    background-color: #ffffff82 !important; 
+}
+
+.toggle-btn{
+    margin-right: 2rem;
+}
+
+.navbar .links li{
+    padding: 1.7rem 1rem;
+    transition: .3s;
+}
+
+.navbar .links li a{
+    padding: 1.6rem 1.5rem;
+}
+
+.navbar .links li:hover{
+    background-color: #ffffff53;
+    cursor: pointer;
+}
+
+.navbar .logo{
+    margin-left: 2rem;
+}
+
+/* dropdown menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open{
+    height: 209px;
+    margin-top: 10px;
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.dropdown-menu li:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+
+/* education section */
+
+.education-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: #f2dcd3;
+}
+
+.edu-item-1,
+.edu-item-2{
+    height: 500px;
+    width: 47%;
+    margin: 5rem 0;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #e7bdb3;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    transition: all .5s;
+}
+
+.edu-item-1{
+    background-image: url(./edu-1.jpg);
+}
+
+.edu-item-2{
+    background-image: url(./edu-2.jpg);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.185);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.form-1,
+.form-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.edu-item-2:hover .overlay,
+.edu-item-1:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+} 
+/* responsive */
+
+@media(max-width: 1000px){
+    .education-section{
+        overflow-x: hidden;
+    }
+
+    .background{
+        overflow: hidden;
+    }
+    
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    .dropdown-menu li{
+        padding: 0;
+    }
+
+    .dropdown-menu a{
+        padding: .69rem 7.1rem;
+    }
+
+    .education-section{
+        margin: 0;
+    }
+
+    .edu-item-1,
+    .edu-item-2{
+        margin: 12rem 0 ;
+    }
+
+    .education-section{
+        padding: 0 1.5rem;
+    }
+}
+
+@media(max-width: 913px){
+    .edu-item-1,
+    .edu-item-2{
+        margin: 17rem 0;
+    }
+
+    .education-section{
+        padding: 0 1.5rem;
+    }
+}
+
+@media(max-width: 769px){
+
+}
+
+@media(max-width: 576px){
+    body{
+        overflow: auto;
+    }
+    
+    .navbar{
+        background-image: url(./background-1.jpg);
+        background-size: cover;
+    }
+    
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 3;
+    }
+
+    .dropdown-menu li{
+        padding: 0;
+    }
+
+    .dropdown-menu a{
+        padding: .69rem 7.1rem;
+    }
+
+    .hero-section h1{
+        font-size: 3.3rem;
+    }
+    
+    .education-section{
+       flex-direction: column; 
+       padding: 0;
+    }
+
+    .edu-item-1,
+    .edu-item-2{
+        width: 90%;
+        margin: 2rem auto;
+        height: 450px;
+    }
+
+    .form-1,
+    .form-2{
+        font-size: 2rem;
+    }
+
+    .overlay{
+        opacity: 1;
+    }
+}
+
+@media(max-width: 375px){
+
+}
+
+@media(max-width: 281px){
+    .navbar .logo{
+        transform: scale(.7);
+    }
+
+    .hero-section h1{
+        font-size: 2.5rem;
+    }
+
+    .form-2{
+        font-size: 1.5rem;
+    }
+}
